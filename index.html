@@ -18,10 +18,10 @@
             window.$docsify = {
                 name: '数据结构与算法',
                 // 文档标题跳转地址
-                // alias: {
-                // '/': 'docs/_home.md',
-                // '/.*/_sidebar.md': '_sidebar.md'
-                // },
+                alias: {
+                    '/': 'docs/_home.md',
+                    '/*/_sidebar.md': 'docs/_sidebar.md'
+                },
                 // nameLink: '/',
                 // 页面github挂件
                 repo: 'https://github.com/Y-Bingo',
@@ -35,9 +35,9 @@
                 // basePath: '/docs/',
                 // basePath: 'https://y-bingo.github.io/JS-DOC/',
                 // 入口文件改为 /doc/_home.md
-                homepage: 'docs/_home.md',
+                // homepage: 'docs/_home.md',
                 // 加载 _sidebar.md
-                loadSidebar: 'docs/_sidebar.md',
+                loadSidebar: true,
                 // 切换页面默认跳转到页面顶部
                 auto2top: true,
                 maxLevel: 2,
