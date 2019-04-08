@@ -22,6 +22,7 @@ class Main {
         arr.pop();
         console.log( arr + "" );
     }
+    
 }
 
 new Main();
