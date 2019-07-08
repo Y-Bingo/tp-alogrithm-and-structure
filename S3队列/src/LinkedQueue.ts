@@ -1,75 +1,83 @@
 import { IQueue, INode } from "./Interface";
 
-/**
- * 链表队列
- */
+
 export default class LinkedQueue<E> implements IQueue<E> {
 
     private _head: Node<E>;
-    private _tail: Node<E>;
+    private _taile: Node<E>;
     private _size: number;
 
-    constructor () {
-        this._head = this._tail = null;
+    constructor ()
+    {
+        this._head = this._taile = null;
         this._size = 0;
     }
 
-    get size () {
+    get size ()
+    {
         return this._size;
     }
 
-    get isEmpty () {
+    get isEmpty ()
+    {
         return this._size === 0;
     }
 
-    enqueue ( ele: E ): void {
-        if ( this._tail === null ) {
-            this._tail = new Node( ele );
-            this._head = this._tail;
+    enqueue ( ele: E ): void
+    {
+        if ( this._taile === null ) {
+            this._taile = new Node( ele );
+            this._head = this._taile;
         }
         else {
-            this._tail.next = new Node( ele );
-            this._tail = this._tail.next;
+            this._taile.next = new Node( ele );
+            this._taile = this._taile.next;
         }
         this._size++;
     }
 
-    getFront (): E {
+    getFront (): E
+    {
         return this._head.e;
     }
 
-    dequeue (): E {
+    dequeue (): E
+    {
         if ( this.isEmpty ) return null;
         let resNode = this._head;
         this._head = this._head.next;
         if ( this._head === null )
-            this._tail = this._head;
+            this._taile = this._head;
         this._size--;
         return resNode.e;
     }
 
-    toString (): string {
+    toString (): string
+    {
         let curNode: Node<E> = this._head;
-        let result = "LinkedQueue:  front ";
+        let resutl = "LinkedQueue:  front ";
         while ( curNode ) {
-            result += curNode.e + "  -> ";
+            resutl += curNode.e + "  -> ";
             curNode = curNode.next;
         }
-        result += "Null tail";
-        return result;
+        resutl += "Null tail";
+        return resutl;
     }
+
 }
 
 class Node<E> implements INode<E> {
     e: E;
     next: Node<E>;
 
-    constructor ( e: E, next: Node<E> = null ) {
+    constructor ( e: E, next: Node<E> = null )
+    {
         this.e = e;
         this.next = next;
     }
 
-    toString (): string {
+    toString (): string
+    {
         return this.e.toString();
     }
 }
