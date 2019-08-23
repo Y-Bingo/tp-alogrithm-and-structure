@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="description" content="Description">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+
+    </head>
+
+    <body>
+        <div id="app"> Loading...</div>
+        <script>
+            window.$docsify = {
+                name: '数据结构与算法',
+                // 文档标题跳转地址
+                // alias: {
+                // '/': 'docs/_home.md',
+                // '/.*/_sidebar.md': '_sidebar.md'
+                // },
+                // nameLink: '/',
+                // 页面github挂件
+                repo: 'https://github.com/Y-Bingo',
+                // 显示文档更新日期
+                formatUpdated: '{MM}/{DD} {HH}:{mm}',
+                // 开启404 页面
+                notFoundPage: true,
+                // 开启相对地址
+                // relativePath: true,
+                // 文档加载的根路径
+                // basePath: '/docs/',
+                // basePath: 'https://y-bingo.github.io/JS-DOC/',
+                // 入口文件改为 /doc/_home.md
+                homepage: 'docs/_home.md',
+                // 加载 _sidebar.md
+                loadSidebar: 'docs/_sidebar.md',
+                // 切换页面默认跳转到页面顶部
+                auto2top: true,
+                maxLevel: 2,
+                subMaxLevel: 3,
+                // ************************* Plugins *************************
+                // https://docsify.js.org/#/zh-cn/plugins
+                // 全文搜索 - Search
+                search: 'auto',
+            }
+        </script>
+        <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+        <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+        <script src="https://unpkg.com/docsify/lib/plugins/search.js"></script>
+    </body>
+
+</html>
